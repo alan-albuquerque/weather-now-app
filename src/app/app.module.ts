@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './core/layout/layout.module';
+import { WeatherModule } from './weather/weather.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LayoutModule } from './core/layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
+    WeatherModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
