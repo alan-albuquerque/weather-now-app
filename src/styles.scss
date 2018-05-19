@@ -52,7 +52,10 @@ body {
   text-align: center;
 }
 
-.small-note {
+.text-note {
   color: color(text-dark-light);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
+  &.small-note {
+    font-size: 0.6rem;
+  }
 }

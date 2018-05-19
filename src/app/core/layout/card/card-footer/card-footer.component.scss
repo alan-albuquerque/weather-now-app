@@ -6,8 +6,11 @@
   padding: 0 15px;
   display: flex;
   align-items: center;
-  border-top: 1px solid color(divider);
   &.centered {
     justify-content: center;
   }
+}
+
+.app-card-footer {
+  width: 100%;
 }

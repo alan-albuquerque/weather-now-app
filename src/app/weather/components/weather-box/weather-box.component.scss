@@ -1,3 +1,5 @@
+@import "utils";
+
 .temp-label {
   font-size: 4.8rem;
   letter-spacing: -0.3rem;
@@ -6,4 +8,33 @@
     font-size: 0.5em;
     vertical-align: super;
   }
+  &.low-temp {
+    color: color(low-temperature);
+  }
+  &.medium-temp {
+    color: color(medium-temperature);
+  }
+  &.high-temp {
+    color: color(high-temperature);
+  }
+}
+
+.temp-details {
+  display: flex;
+  flex-direction: row;
+  .temp-details-item {
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.3rem;
+    padding: 10px 5px 0;
+    flex: 1 100%;
+  }
+  .details-value {
+    font-size: 1.2rem;
+  }
+}
+
+.last-updated {
+  text-align: center;
+  padding: 5px 15px 15px;
 }

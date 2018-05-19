@@ -3,13 +3,25 @@
         Urubici, BR
     </app-card-header>
     <app-card-content class="centered">
-        <div class="temp-label">
+        <div class="temp-label high-temp">
             19<span class="temp-symbol">°</span>
         </div>
     </app-card-content>
-    <app-card-footer class="centered">
-        <small class="small-note">
-            Updated at 02:48:32 PM
-        </small>
+    <app-card-footer>
+        <div class="temp-details">
+            <div class="temp-details-item">
+                <div class="text-note">HUMIDITY</div>
+                <span class="details-value">75</span>%
+            </div>
+            <div class="temp-details-item">
+                <div class="text-note">PRESSURE</div>
+                <span class="details-value">892</span>hPa
+            </div>
+        </div>
+        <div class="last-updated">
+            <small class="text-note small-note">
+                Updated at 02:48:32 PM
+            </small>
+        </div>
     </app-card-footer>
 </app-card>
