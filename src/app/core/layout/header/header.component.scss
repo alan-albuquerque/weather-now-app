@@ -1,9 +1,10 @@
-@import "../../../../assets/theme/utils/color";
+@import "utils";
+@import "variables";
 
 header {
   width: 100%;
+  height: 100%;
   background-color: color(header-background);
-  height: 54px;
   .logo-wrapper {
     height: 100%;
     display: flex;

@@ -1,8 +1,16 @@
+$space-item: 15px;
+
 .weather-box-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: $space-item 5px;
+  height: 80vh;
+  min-height: 250px;
+  .weather-box-item {
+    flex-basis: 255px;
+    margin: $space-item 5px;
+  }
 }

@@ -1,0 +1,13 @@
+@import "utils";
+
+:host {
+  background-color: color(card-footer-background);
+  min-height: 40px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid color(divider);
+  &.centered {
+    justify-content: center;
+  }
+}

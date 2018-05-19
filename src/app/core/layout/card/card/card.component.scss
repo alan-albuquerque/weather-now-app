@@ -1,0 +1,11 @@
+@import "utils";
+@import "variables";
+
+:host {
+  max-width: 255px;
+  width: 100%;
+  background: color(card-content-background);
+  box-shadow: 2px 2px 4px color(box-shadow);
+  border-radius: $card-border-radius;
+  display: block;
+}

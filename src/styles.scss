@@ -1,6 +1,58 @@
-@import "assets/theme/utils/color";
+@import "utils";
+@import "variables";
+
+html {
+  height: 100%;
+}
 
 body {
+  min-height: 100%;
+  min-width: $layout-min-width;
   background-color: color(app-background);
   font-family: Helvetica, Arial, sans-serif;
+  color: color(text-dark-dark);
+
+  .header-wrapper {
+    width: 100%;
+    display: block;
+    height: $header-height;
+    .header-control {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+
+  &.fixed-header { // add this class to body to enable the fixed header
+    padding-top: $header-height;
+    box-sizing: border-box;
+    .header-wrapper {
+      min-width: $layout-min-width;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+  }
+}
+
+// layout helpers
+
+.text-centered {
+  text-align: center;
+}
+
+[full] {
+  width: 100% !important;
+}
+
+.centered {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.small-note {
+  color: color(text-dark-light);
+  font-size: 0.6rem;
 }

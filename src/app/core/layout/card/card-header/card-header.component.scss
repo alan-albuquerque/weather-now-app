@@ -1,0 +1,12 @@
+@import "utils";
+
+:host {
+  min-height: 42px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid color(divider);
+  &.centered {
+    justify-content: center;
+  }
+}
