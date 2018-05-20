@@ -15,7 +15,7 @@ import deserialize = ObjectMapper.deserialize;
   providedIn: 'root'
 })
 export class OpenWeatherMapService implements WeatherService {
-  baseUrl = 'http://api.openweathermap.org/data/2.5/';
+  baseUrl = 'https://api.openweathermap.org/data/2.5/';
 
   constructor(public cachedHttp: CachedHttpClient) {
   }
