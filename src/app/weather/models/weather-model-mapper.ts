@@ -1,6 +1,9 @@
 import { OpenWeatherResponseDTO } from '../services/weather/data-providers/open-weather-map/dto';
 import { WeatherInfo } from './weather-info';
 
+/**
+ * Map Class to convert the Weather services response objects for app level objects
+ */
 export class WeatherModelMapper {
   map<T>(object: any): T {
     if (object instanceof OpenWeatherResponseDTO) {

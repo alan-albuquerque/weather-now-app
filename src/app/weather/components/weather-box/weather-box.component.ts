@@ -51,7 +51,6 @@ export class WeatherBoxComponent implements OnInit {
     }
     this.weatherService.byCityName(this._city.name, this._city.countryCode)
       .subscribe((data) => {
-        console.log(data);
         this.lastUpdate = new Date();
         this.loading = false;
         this.error = false;
