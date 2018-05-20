@@ -6,11 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './core/layout/layout.module';
 import { WeatherModule } from './weather/weather.module';
 import { HttpClientModule } from '@angular/common/http';
-import { CacheModule } from 'ionic-cache';
 
 import 'reflect-metadata';
+import { CachedHttpClient } from './shared/cache/cached-http-client';
 
-export const MODULE_CONFIG = {
+@NgModule({
   declarations: [
     AppComponent,
   ],
@@ -20,12 +20,10 @@ export const MODULE_CONFIG = {
     AppRoutingModule,
     LayoutModule,
     WeatherModule,
-    CacheModule.forRoot(),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-};
 
-@NgModule(MODULE_CONFIG)
+  ],
+  providers: [CachedHttpClient],
+  bootstrap: [AppComponent]
+})
 export class AppModule {
 }

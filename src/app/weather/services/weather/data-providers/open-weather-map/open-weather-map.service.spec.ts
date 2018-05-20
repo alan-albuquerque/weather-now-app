@@ -5,7 +5,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 
 import * as mock from '../../../../../../mock/data/open-weather-map.json';
 import { WeatherInfo } from '../../../../models/weather-info';
-import { CacheModule } from 'ionic-cache';
 
 describe('OpenWeatherMapService', () => {
   let injector: TestBed;
@@ -14,7 +13,7 @@ describe('OpenWeatherMapService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, CacheModule.forRoot()],
+      imports: [HttpClientTestingModule],
       providers: [OpenWeatherMapService]
     });
     injector = getTestBed();
@@ -31,7 +30,6 @@ describe('OpenWeatherMapService', () => {
   }));
 
   it('#byCityName should return WeatherInfo', () => {
-    service.enableCache(false);
     service.byCityName('Joinville', 'BR').subscribe((data => {
       expect(data instanceof WeatherInfo).toBeTruthy();
     }));
