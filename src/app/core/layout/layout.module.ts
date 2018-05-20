@@ -7,6 +7,7 @@ import { CardHeaderComponent } from './card/card-header/card-header.component';
 import { CardContentComponent } from './card/card-content/card-content.component';
 import { CardFooterComponent } from './card/card-footer/card-footer.component';
 import { CardComponent } from './card/card/card.component';
+import { LoadingComponent } from './loading/loading.component';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -16,6 +17,7 @@ const COMPONENTS = [
   CardContentComponent,
   CardFooterComponent,
   CardComponent,
+  LoadingComponent,
 ];
 
 @NgModule({

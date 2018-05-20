@@ -1,7 +1,7 @@
 @import "utils";
 
 .temp-label {
-  font-size: 4.8rem;
+  font-size: 6rem;
   letter-spacing: -0.3rem;
   padding: 26px 10px;
   .temp-symbol {
@@ -37,4 +37,15 @@
 .last-updated {
   text-align: center;
   padding: 5px 15px 15px;
+}
+
+.weather-data-container {
+  min-height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-card {
+  cursor: pointer;
 }

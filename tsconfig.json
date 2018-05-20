@@ -10,11 +10,24 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "src/types"
     ],
+    "paths": {
+      "@env": [
+        "src/environments/environment"
+      ],
+      "@mock": [
+        "src/mock"
+      ]
+    },
     "lib": [
       "es2017",
       "dom"
     ]
-  }
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/json-typescript-mapper/libs/utils.ts"
+  ]
 }

@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.loading-container {
+  width: 100%;
+  min-height: 60px;
+  background: url("../../../../assets/imgs/loader.svg") no-repeat center center;
+}

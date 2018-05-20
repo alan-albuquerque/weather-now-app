@@ -1,26 +1,33 @@
-<app-card>
+<app-card *ngIf="city" (click)="toggleShowMoreInfo()">
     <app-card-header class="centered">
-        Urubici, BR
+        {{city.formatted()}}
     </app-card-header>
-    <app-card-content class="centered">
-        <div class="temp-label high-temp">
-            19<span class="temp-symbol">°</span>
+    <app-card-content class="centered weather-data-container">
+        <div class="temp-label" [appTemperatureStyle]="weatherInfo.temp" *ngIf="isDataLoaded">
+            {{weatherInfo.temp | floatFixed}}<span class="temp-symbol">°</span>
+        </div>
+        <app-loading *ngIf="loading"></app-loading>
+        <div class="error-message" *ngIf="error">
+            <p>
+                Something went wrong
+            </p>
+            <button class="btn btn-gray" (click)="tryAgain()" title="try to recover the data again">Try Again</button>
         </div>
     </app-card-content>
-    <app-card-footer>
-        <div class="temp-details">
+    <app-card-footer *ngIf="isDataLoaded">
+        <div class="temp-details" *ngIf="showMoreInfo">
             <div class="temp-details-item">
                 <div class="text-note">HUMIDITY</div>
-                <span class="details-value">75</span>%
+                <span class="details-value">{{weatherInfo.humidity}}</span>%
             </div>
             <div class="temp-details-item">
                 <div class="text-note">PRESSURE</div>
-                <span class="details-value">892</span>hPa
+                <span class="details-value">{{weatherInfo.pressure | floatFixed}}</span>hPa
             </div>
         </div>
-        <div class="last-updated">
+        <div class="last-updated" *ngIf="lastUpdate">
             <small class="text-note small-note">
-                Updated at 02:48:32 PM
+                Updated at {{lastUpdate|date:'mediumTime'}}
             </small>
         </div>
     </app-card-footer>

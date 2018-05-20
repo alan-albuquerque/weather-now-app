@@ -1,5 +1,7 @@
 <section class="weather-box-list">
-    <app-weather-box class="weather-box-item"></app-weather-box>
-    <app-weather-box class="weather-box-item"></app-weather-box>
-    <app-weather-box class="weather-box-item"></app-weather-box>
+    <app-weather-box
+            *ngFor="let city of cities"
+            [city]="city"
+            class="weather-box-item"
+    ></app-weather-box>
 </section>

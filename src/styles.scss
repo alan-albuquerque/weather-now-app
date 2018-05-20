@@ -59,3 +59,23 @@ body {
     font-size: 0.6rem;
   }
 }
+
+.error-message{
+  color: color(error);
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 16px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.1s;
+  &:hover {
+    box-shadow: 0 0 6px #3c749f;
+  }
+  &.btn-gray {
+    border: 2px solid #737C84;
+    color: #737C84;
+  }
+}

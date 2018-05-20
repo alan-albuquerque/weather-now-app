@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CacheService } from 'ionic-cache';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(cache: CacheService) {
+    cache.setDefaultTTL(60 * 10); // default cache TTL for 10 minutes
+  }
 }

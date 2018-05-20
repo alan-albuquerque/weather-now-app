@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IWeatherBoxListConfig, IWeatherCity } from '../../interfaces';
 
 @Component({
   selector: 'app-weather-box-list',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherBoxListComponent implements OnInit {
 
-  constructor() { }
+  @Input() config: IWeatherBoxListConfig;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  get cities(): IWeatherCity[] {
+    if (this.config && this.config.cities) {
+      return this.config.cities;
+    }
+    return [];
   }
 
 }
