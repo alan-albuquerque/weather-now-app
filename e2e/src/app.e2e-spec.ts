@@ -1,14 +1,21 @@
-import { AppPage } from './app.po';
+import { HomePage } from './home.po';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('workspace-project HomePage', () => {
+  let page: HomePage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new HomePage();
+    page.navigateTo();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+  it('should find logo', () => {
+    expect(page.getLogoElem().isPresent()).toEqual(true);
+  });
+
+  it('check home page integrity', () => {
+    expect(page.getElem('app-header').isPresent()).toEqual(true);
+    expect(page.getElem('app-main-container').isPresent()).toEqual(true);
+    expect(page.getElem('router-outlet').isPresent()).toEqual(true);
+    expect(page.getElem('app-home').isPresent()).toEqual(true);
   });
 });
